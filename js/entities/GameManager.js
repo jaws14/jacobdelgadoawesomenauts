@@ -9,20 +9,20 @@ game.GameManager = Object.extend({
     update: function(){
         this.now = new Date().getTime();
         this.goldTimerCheck();
-        this.creepTimerCheck():
+        this.creepTimerCheck();
         
          
             
         return true;
         
     },
-    if(Math.round(this.now/1000)%20 ===0 && (this.now - this.lastCreep >= 1000)){
+   
+        
+    goldTimerCheck: function(){
+         if(Math.round(this.now/1000)%20 === 0 && (this.now - this.lastCreep >= 1000)){
            game.data.gold += 1;
            console.log("Current gold:" + game.data.gold);
         }
-        
-    goldTimerCheck: function(){
-        
     },
     
     ccreepTimerCheck: function(){
@@ -31,7 +31,7 @@ game.GameManager = Object.extend({
             var creep = me.pool.pull("EnemyCreep", 1000, 0, {});
             me.game.world.addChild(creep, 5);
         }
-        
+            
     }
 });
 

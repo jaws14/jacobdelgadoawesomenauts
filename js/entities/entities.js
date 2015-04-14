@@ -67,7 +67,7 @@ game.PlayerEntity = me.Entity.extend({
         if (this.attacking) {
 
            this.setAnimation();
-           
+       } 
         me.collision.check(this, true, this.collideHandler.bind(this), true);
         this.body.update(delta);
 
@@ -75,7 +75,7 @@ game.PlayerEntity = me.Entity.extend({
         return true;
     },
     
-    checkIfDead: function(){
+    checkIfDead:function(){
        if (this.health <= 0){
             return true;
              }  
@@ -124,7 +124,7 @@ game.PlayerEntity = me.Entity.extend({
                 //this makes the animation attack the other players base//
                 this.renderable.setCurrentAnimation("attack", "idle");
                 this.renderable.setAnimationFrame();
-            }
+            
         }
         else if (this.body.vel.x !== 0 && !this.renderable.isCurrentAnimation("attack")) {
             if (!this.renderable.isCurrentAnimation("walk")) {
@@ -164,10 +164,10 @@ game.PlayerEntity = me.Entity.extend({
                 this.body.falling = false;
                 this.body.vel.y = -1;
             }
-           this.stopMovement(xdif)){
+           this.stopMovement(xdif);
                
-           };
-    }
+          
+    },
     
     collideWithEnemyCreep: function(){
          var xdif = this.pos.x - response.b.pos.x;
@@ -189,7 +189,9 @@ game.PlayerEntity = me.Entity.extend({
             
     },
     
-    stop.Movement: function(xdif){
+    stopMovement: function(xdif){
+        
+    
          else if (xdif > -35 && this.facing === 'right' && (xdif < 0)) {
                 this.body.vel.x = 0;
                 this.pos.x = this.pos.x = 0;
