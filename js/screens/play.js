@@ -3,18 +3,18 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {
-		// reset the score
-		game.data.score = 0;
-                console.log("play");
                 me.levelDirector.loadLevel("level01"); 
                 this.resetPlayer(0, 420);
                 
                
                var gameTimeManager = me.pool.pull("GameTimeManager", 0, 0, {});
-               me.game.world.addChild(gamemanager, 0);
+               me.game.world.addChild(gameTimeManager, 0);
                
                var HeroDeathManager = me.pool.pull("HeroDeathManager", 0, 0, {});
                me.game.world.addChild(HeroDeathManager, 0);
+               
+               var experienceManager = me.pool.pull("ExperienceManager", 0, 0, {});
+               me.game.world.addChild(experienceManager, 0);
                
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.LEFT, "left");

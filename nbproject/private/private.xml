@@ -5,7 +5,12 @@
         <group>
             <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/resources.js</file>
+            <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/entities/GameManager.js</file>
+            <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/entities/EnemyBaseEntity.js</file>
+            <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/entities/EnemyCreep.js</file>
             <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/index.php</file>
+            <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/screens/title.js</file>
+            <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/entities/PlayerBaseEntity.js</file>
             <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/game.js</file>
             <file>file:/C:/xampp/htdocs/jacobldelgadoawesomenauts/js/screens/play.js</file>
         </group>
